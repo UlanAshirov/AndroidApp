@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.detail.DetailCharacterFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="12dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="12dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgDetailCharacter"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Name:"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/characterName"
+        app:layout_constraintStart_toStartOf="@+id/card"
+        app:layout_constraintTop_toBottomOf="@+id/card" />
+
+    <TextView
+        android:id="@+id/tvGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Gender:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/tvName"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+    <TextView
+        android:id="@+id/tvLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Location:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/tvGender"
+        app:layout_constraintTop_toBottomOf="@+id/tvGender" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Status:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/tvLocation"
+        app:layout_constraintTop_toBottomOf="@+id/tvLocation" />
+
+
+    <TextView
+        android:id="@+id/characterName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Name"
+        android:layout_marginStart="12dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/card"
+        app:layout_constraintStart_toEndOf="@+id/tvName"
+        app:layout_constraintTop_toBottomOf="@+id/card" />
+
+    <TextView
+        android:id="@+id/characterGender"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Gender"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/card"
+        app:layout_constraintStart_toStartOf="@+id/characterName"
+        app:layout_constraintTop_toBottomOf="@+id/characterName" />
+
+    <TextView
+        android:id="@+id/characterLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Location"
+        android:layout_marginStart="12dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/card"
+        app:layout_constraintStart_toStartOf="@+id/characterGender"
+        app:layout_constraintTop_toBottomOf="@+id/characterGender" />
+
+    <TextView
+        android:id="@+id/characterStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Status"
+        android:textColor="@color/black"
+        android:layout_marginStart="12dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/card"
+        app:layout_constraintStart_toStartOf="@+id/characterLocation"
+        app:layout_constraintTop_toBottomOf="@+id/characterLocation" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/chek_internet"
+            android:visibility="gone"
+            layout="@layout/chek_internet"/>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
